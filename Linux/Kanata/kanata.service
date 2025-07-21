@@ -1,0 +1,12 @@
+# ~/.config/systemd/user/kanata.service
+
+[Unit]
+Description=Kanata Service
+
+[Service]
+ExecStartPre=/sbin/modprobe uinput
+ExecStart=/path/to/kanata -c /path/to/kanata.kbd
+Restart=no
+
+[Install]
+WantedBy=multi-user.target
