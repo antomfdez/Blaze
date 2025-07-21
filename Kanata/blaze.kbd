@@ -1,0 +1,27 @@
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer base
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  w    p    d    f    g    q    x    o    u    ,    [    ]    \
+  caps r    n    t    s    y    j    h    a    e    i    '    ret
+  lsft b    k    c    v    z    m    l    '    ;    .    rsft
+  lctl lmet lalt           spc            @ralt_hold rmet rctl
+)
+
+(deflayer arrow
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    up   _    _    _    _    _
+  _    _    _    _    _    _    _    left down right esc _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _    _
+)
+
+(defalias
+  ralt_hold (tap-hold 200 200 ralt (layer-toggle arrow))
+)
