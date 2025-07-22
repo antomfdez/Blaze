@@ -9,4 +9,4 @@ ExecStart=/path/to/kanata -c /path/to/kanata.kbd
 Restart=no
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
