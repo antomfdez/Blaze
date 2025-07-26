@@ -14,14 +14,25 @@
   lctl lmet lalt           spc            @ralt_hold rmet rctl
 )
 
-(deflayer arrow
+(deflayer navsymbol
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    up   _    _    _    _    _
-  _    _    _    _    _    _    _    left down right esc _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
+  _    @pl  @as  @lb  @rb  _    _    _    up   _    _    _    _    _
+  _    @un  @eq  @lp  @rp  _    _    left down right esc _    _
+  _    @ho  @lr  @rr  _    _    _    _    _    _    _    _
   _    _    _              _              _    _    _
 )
 
 (defalias
-  ralt_hold (tap-hold 200 200 ralt (layer-toggle arrow))
+  ralt_hold (tap-hold 200 200 ralt (layer-toggle navsymbol))
+  lp (unicode "(")
+  rp (unicode ")")
+  lb (unicode "[")
+  rb (unicode "]")
+  lr (unicode "{")
+  rr (unicode "}")
+  eq (unicode "=")
+  as (unicode "*")
+  pl (unicode "+")
+  un (unicode "_")
+  ho (unicode "~")
 )
